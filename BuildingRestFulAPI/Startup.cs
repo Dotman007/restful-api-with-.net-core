@@ -92,25 +92,7 @@ namespace BuildingRestFulAPI
                 });
             });
             services.AddAuthentication("Basic").AddScheme<BasicAuthenticationOptions, BasicAuhenticationHandler>("Basic", null);
-            //services.AddIdentityServer()
-            //    .AddInMemoryApiResources(Config.GetApiResources())
-            //    .AddInMemoryClients(Config.GetClients())
-            //    .AddProfileService<ProfileService>()
-            //    .AddDeveloperSigningCredential();
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-
-            //}).AddJwtBearer(o =>
-            //{
-            //    o.Authority = "http://localhost:51985";
-            //    o.Audience = "BuildingRestFulAPI.ReadAccess";
-            //    o.RequireHttpsMetadata = false;
-            //});
-                //(_config.GetApiResources());
             services.AddTransient<IAuthenticationHandler, BasicAuhenticationHandler>();
-            //services.AddTransient<IAuthenticationHandler, AgentAuthenticationHandler>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<ICustomer, CustomerRepository>();
             services.AddTransient<IBank, BankRepository>();
