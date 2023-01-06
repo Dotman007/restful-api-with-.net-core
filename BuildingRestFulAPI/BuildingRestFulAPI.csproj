@@ -21,7 +21,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="6.4.0" />
   </ItemGroup>
 
 </Project>
